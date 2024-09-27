@@ -1,0 +1,620 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+body{
+    background-color: #433a57;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+header{
+    background: linear-gradient(90deg, #433a57, #cb6ce6);/*Color de fondo*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Espacios iguales en el contenedor*/
+    align-content: center; /*centrado verticalmente*/
+    margin: 0;
+}
+.logo img{
+    max-width: 300px;/*Ajusta el tamaño del logo en la caja*/
+    height: auto;/*mantiene el tamaño*/
+    margin: 5px;
+}
+.busqueda{
+    display: flex;
+    align-items: center;/*centrado verticalmente*/
+    background-color: transparent;/*Color del imput*/
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+}
+.busqueda input{
+    border: none;/*Sin borde*/
+    outline: none;/*sin contorno al hacer clic*/
+    padding: 5px;
+    width: 100%;/*ocupa todo el ancho disponible*/
+    background-color: transparent;
+}
+.busqueda i{
+    margin-right: 5px; /*Espacio entre el icono y el input*/
+}
+.busqueda, input::placeholder {
+    color: black;
+}
+.boton {
+    display: none;
+    position: relative;
+    padding: 5px 40px;
+    list-style: none;
+    background: #cb6ce6;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.boton:hover{
+    background-color: #433a57;
+    color: #fff;
+    font-weight: bold;
+}
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.enlace{
+    display: inline-block;/*Elementos en bloque*/
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+}
+.enlace:hover{
+    background-color: #433a57;
+    color: #fff;
+    font-weight: bold;
+}
+section{
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.generos {
+    display: flex; 
+    align-content: center; 
+    text-align: center;
+    padding: 10px; 
+    margin-top: 0;
+    font-size: 18px;
+}
+.generos a {
+    color: #cb6ce6;
+    text-decoration: none; 
+    margin: 0 10px;
+    font-weight: bold;
+}
+.generos a:hover {
+    background-color: #cb6ce6;
+    color: black;
+}
+.generos i{
+    margin: 0 5px;
+    color: black;
+}
+section{
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.wrapper {
+	max-width: 1200px;
+    width: 100%;
+	margin: auto;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.slider {
+	position: relative;
+}
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+.slide img {
+	width: 100%;
+	vertical-align: top;
+    object-fit: cover;
+}
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #3d3051;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.top {
+    display: block;
+    padding: 0;
+    border-radius: 15px;
+    width: 100%;
+}
+.titulo {
+    display: flex;
+    width: 100%;
+    text-decoration: underline;
+    color: #fff;
+    text-align: center;
+    gap: 10px;
+}
+.titulo h1 {
+    font-size: 24px; 
+    color: white; 
+    text-transform: uppercase; /* Hace que el texto sea mayúsculas */
+    letter-spacing: 1.5px; /* Añade un pequeño espacio entre letras */
+}
+.titulo img{
+    margin: 10px;
+    height: auto;
+    width: 6%;
+}
+/* Secciones principales */
+.top-escuchadas {
+    display: flex;
+    background-color: #5c476f;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.artistas-momento{
+    display: flex;
+    background-color: #5c476f;
+    padding: 10px;
+    border-radius: 15px;
+    width: calc(30% - 30px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Título de seccion artistas */
+.artistas-momento h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Contenedores de canciones y artistas */
+.artistas-momento {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.songs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de ancho igual */
+    gap: 20px; /* Espaciado entre las tarjetas */
+}
+/* Elementos de canciones y artistas */
+.artist-item {
+    display: flex;
+    align-items: center;
+    background-color: #4a3a5a;
+    padding: 5px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.song-item{
+    background-color: #4a3a5a;
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+/* Efecto hover para interactividad */
+.song-item:hover, .artist-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #372c4b;
+}
+
+/* Estilos de imágenes */
+.song-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+.artist-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+/* Estilo de texto para canciones y artistas */
+.song-item p {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #f0eaff;
+}
+.artist-item p {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #f0eaff;
+}
+/* Añadir iconos musicales */
+.music-notes {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.6;
+}
+
+/* Animación de notas musicales */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.container2 {
+    display: block;
+    justify-content: space-around;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #3d3051;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+.titulo2 {
+    display: flex;
+    width: 100%;
+    text-decoration: underline;
+    color: #fff;
+    text-align: center;
+    gap: 10px;
+}
+
+.titulo2 h2 {
+    font-size: 24px; 
+    color: white; 
+    text-transform: uppercase; /* Hace que el texto sea mayúsculas */
+    letter-spacing: 1.5px; /* Añade un pequeño espacio entre letras */
+}
+
+.icono {
+    margin: 10px;
+    height: auto;
+    width: 6%;
+}
+.caja{
+    width: 55%; /* Asegura que el contenedor ocupe todo el ancho */
+    padding: 0; /* Elimina cualquier padding adicional */
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: #4a3a5a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+/* Contenedor de las canciones */
+.songs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border: 3px solid #fff;
+    padding: 30px 10px;
+    border-radius: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-item1 {
+    display: flex;
+    align-items: center;
+    background-color: #6b5784;
+    padding: 10px 15px;
+    border-radius: 17px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-item1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.song-item1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.song-item1 p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.formulario {
+    display: block;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    background: #3d3051;
+}
+form{
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    border: 3px solid #fff;
+    padding: 30px 350px;
+    border-radius: 15px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+form, h2 {
+    color: #fff;
+    font-size: 25px;
+}
+form label {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+form input, textarea {
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #6b5784;
+    border: 2px solid #F0FAF1;
+    color: #fff;
+    outline: none;
+}
+form input::placeholder, textarea::placeholder {
+    color: #fff;
+}
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.form-txt a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn {
+    font-size: 16px;
+    color: #fff;
+    border:0;
+    border-radius: 25px;
+    background-color: #6b5784;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #cb6ce6;
+}
+
+footer{
+    text-align: center;
+    align-content: center;
+    margin: 0;
+    padding: 40px;
+    width: 90%;
+    background-color: #3d3051;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: #fff;
+}
+/* Responsive para pantallas más pequeñas */
+
+.music-notes {
+    animation: float 3s infinite ease-in-out;
+    font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .top-escuchadas, .artistas-momento {
+        width: calc(85% - 20px);
+        margin-bottom: 20px;
+    }
+    .song-item img, .artist-item img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .song-item p, .artist-item p {
+        font-size: 18px;
+    }
+    .container2{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .songs-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: calc(85% - 20px);
+    }
+}
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 1200px;
+	}
+}
+@media(max-width:600px) {
+    .nav-head {
+        flex-direction: column;
+        margin-right: 5px;
+        border-radius: 5px;
+        width: calc(70% - 20px) ;
+        }
+        .enlace {
+        margin: 5px;
+        }
+        .boton {
+        display: inline-block;
+        }
+        .desaparece {
+        display: none;
+        }
+    .nav {
+        flex-direction: block;
+        width: calc(70% - 20px) ;
+    }
+    .generos {
+        display: flex;
+        background: #cb6ce6;
+        color: black;
+        width: calc(95% - 20px) ;
+        margin-right: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 10px;
+        width: calc(70% - 20px) ;
+    }
+    form{
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        width: calc(70% - 20px) ;
+        text-align: center;
+    }
+}
+
+@media(max-width:1070px) {
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: calc(80% - 20px);
+        margin-bottom: 20px;
+    }
+    form {
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100% ;
+    }
+}
